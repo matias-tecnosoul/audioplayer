@@ -27,7 +27,8 @@ function playMp3Mild() {
 }
 
 function playRemoteFile() {
-	var media = new Media("https://radios2.tecnosoul.com.ar:8001/guayraradio");
+	//var media = new Media("https://radios2.tecnosoul.com.ar:8001/guayraradio");
+    var media = new Media("https://streamer.radio.co/s70f9a6a5f/listen");
 	media.setVolume(0.7);
     media.play();
 }
