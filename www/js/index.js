@@ -7,8 +7,8 @@ document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
 	document.querySelector("#playMp3").addEventListener("touchend", playMP3, false);
 	document.querySelector("#playMp3Mild").addEventListener("touchend", playMp3Mild, false);
-	document.querySelector("#playRemoteFile").addEventListener("touchend", playRemoteFile, false);
-
+	document.querySelector("#playRemoteFileBasico").addEventListener("touchend", playBasico, false);
+    document.querySelector("#playRemoteFile").addEventListener("touchend", playRemoteFile, false);
 }
 
 function playMP3() {
@@ -18,6 +18,11 @@ function playMP3() {
 	media.setVolume(1.0);
     media.play();
 }
+function playBasico() {
+    var audio = new Audio('https://streamer.radio.co/s70f9a6a5f/listen');
+    audio.setAttribute('title', 'My Station');
+    audio.play();
+    }
 
 function playMp3Mild() {
     var mp3URL = getMediaURL("sounds/button-1.mp3");
